@@ -28,7 +28,8 @@ def listfile(dirname):
 #print sys.argv[1]##python ftpupload.py -u     will print -u
 try:
     from configparser import ConfigParser
-
+except ImportError:
+    from ConfigParser import ConfigParser  # ver. < 3.0
 
 
 # instantiate
